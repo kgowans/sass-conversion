@@ -1,0 +1,78 @@
+        .bg-footer {
+            background-color: $white;
+            color: $light-grey;
+        }
+        
+        footer {
+            h4 {
+                font-size: 1.414rem;
+                padding: 0.5rem 2rem;
+                color: $dark-brown;
+            }
+            p {
+                font-size: 1rem;
+                padding: 0.5rem 2rem;
+                color: $dark-grey;
+            }
+            .fa-circle {
+                color: $dark-grey;
+                @include medium () {
+                    color: $med-blue;
+                }
+            }
+            .col2:last-child {
+                unicode-bidi: bidi-override;
+                direction: rtl;
+            }
+            h4[lang=de] {
+                display: block;
+            }
+            h4[lang=en],
+            h4[lang=ar],
+            h4[lang=ru] {
+                display: none;
+            }
+            @include medium () {
+                h4[lang=ar] {
+                    display: block;
+                }
+                h4[lang=de],
+                h4[lang=en],
+                h4[lang=ru] {
+                    display: none;
+                }
+            }
+            @include large () {
+                .fa-circle {
+                    color: $light-brown;
+                }
+                h4[lang=ru] {
+                    display: block;
+                }
+                h4[lang=de],
+                h4[lang=ar],
+                h4[lang=en] {
+                    display: none;
+                }
+            }
+            @include largest () {
+                p {
+                    font-size: 1.414rem;
+                    letter-spacing: 0.2rem;
+                    &:last-child {
+                        color: $light-grey;
+                    }
+                }
+                .fa-circle {
+                    color: $med-blue;
+                }
+                h4[lang=en] {
+                    display: block;
+                }
+                h4[lang=de],
+                h4[lang=ar],
+                h4[lang=ru] {
+                    display: none;
+                }
+            }
+        }

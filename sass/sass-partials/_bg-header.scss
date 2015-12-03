@@ -1,0 +1,254 @@
+.bg-header {
+    background-color: $white;
+    background-color: $light-blue;
+    color: $dark-grey;
+    border-bottom: 1rem solid $med-blue;
+    border-top: 1rem solid $dark-blue;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        width: 30%;
+        height: 1rem;
+        background-color: $dark-blue;
+        left: 0;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        width: 30%;
+        height: 1rem;
+        background-color: $dark-blue;
+        right: 0;
+    }
+}
+
+
+/***********************************************
+                CONTENT
+***********************************************/
+
+header {
+    width: 400px;
+    /* default */
+    margin: 0 auto;
+    position: relative;
+    @include medium () {
+        width: 700px;
+        margin: 0 auto;
+        min-height: 8rem;
+        &:before,
+        &:after {
+            width: 230px;
+        }
+    }
+    @include large () {
+        width: 900px;
+        margin: 0 auto;
+        &:before,
+        &:after {
+            width: 300px;
+        }
+    }
+    @include largest () {
+        width: 1400px;
+        margin: 0 auto;
+        &:before,
+        &:after {
+            width: 450px;
+        }
+    }
+    h1 {
+        width: 100%;
+        padding: 0 2rem;
+        color: $dark-brown;
+        letter-spacing: 0.1rem;
+        @include medium () {
+            width: 100%;
+            color: $dark-brown;
+        }
+        @include large () {
+            width: 100%;
+            color: $dark-blue;
+        }
+        @include largest () {
+            width: 100%;
+            color: $dark-brown;
+        }
+        i.fa-lg {
+            display: block;
+            width: 25%;
+            float: left;
+            font-size: 7rem;
+            line-height: 12.7936rem;
+            color: $light-brown;
+            @include medium () {
+                display: inline;
+                color: $dark-brown;
+                vertical-align: baseline;
+                float: none;
+                font-size: 4rem;
+                line-height: 6.3968rem;
+            }
+            @include large () {
+                display: inline;
+                color: $dark-blue;
+                vertical-align: baseline;
+                float: none;
+                font-size: 4rem;
+                line-height: 6.3968rem;
+            }
+            @include largest () {
+                display: inline;
+                color: $dark-brown;
+                vertical-align: baseline;
+                float: none;
+                font-size: 4rem;
+                line-height: 6.3968rem;
+            }
+        }
+    }
+    i.fa-lg ~ span {
+        float: right;
+        width: 75%;
+        font-size: 3.998rem;
+        /**
+            2 lines of 3.998 * 1.6 = 12.7936
+            **/
+        padding-left: 1rem;
+        text-align: right;
+        @include medium () {
+            float: none;
+            letter-spacing: 0.25rem;
+            font-size: 3.998rem;
+            /**
+        1 lines of 3.998 * 1.6 = 6.3968
+        **/
+            text-align: left;
+        }
+        @include large () {
+            float: none;
+            letter-spacing: 0.25rem;
+            font-size: 3.998rem;
+            /**
+        1 lines of 3.998 * 1.6 = 6.3968
+        **/
+            text-align: left;
+        }
+        @include largest () {
+            float: none;
+            letter-spacing: 0.25rem;
+            font-size: 3.998rem;
+            /**
+        1 lines of 3.998 * 1.6 = 6.3968
+        **/
+            text-align: left;
+        }
+    }
+}
+
+
+/***********************************************
+                NAVIGATION
+***********************************************/
+
+header nav {
+    width: 100%;
+    padding: 2rem 0;
+    clear: both;
+    @include medium () {
+        position: static;
+        clear: both;
+        width: 100%;
+        padding: 0;
+    }
+    @include large () {
+        position: static;
+        clear: both;
+        width: 100%;
+        padding: 0;
+    }
+    @include largest () {
+        position: static;
+        clear: both;
+        width: 100%;
+        padding: 0;
+    }
+    >ul li {
+        width: 100%;
+        float: none;
+        @include medium () {
+            width: 20%;
+            float: left;
+        }
+    }
+    >ul>li {
+        @include large () {
+            width: 20%;
+            float: left;
+            background-color: $white;
+            &:first-child a {
+                border-left: none;
+            }
+        }
+        @include largest () {
+            width: 20%;
+            float: left;
+            background-color: $white;
+            &:first-child a {
+                border-left: none;
+            }
+        }
+    }
+    >ul>li>a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $dark-grey;
+        font-size: 1.414rem;
+        letter-spacing: 0.25rem;
+        border: 1px solid $light-grey;
+        border-bottom: none;
+        padding: 1.0rem 2rem;
+        line-height: 1;
+        background-color: $white;
+        @include medium () {
+            font-size: 1rem;
+            line-height: 2rem;
+            min-height: 6rem;
+            border: none;
+            border-left: 1px solid $light-grey;
+            padding: 1.0rem;
+            background-color: $white;
+            &:last-child {
+                border-right: 1px solid $light-grey;
+            }
+        }
+        @include large () {
+            font-size: 1rem;
+            line-height: 2rem;
+            min-height: 2rem;
+            border: none;
+            border-left: 1px solid $light-grey;
+            padding: 0 1.0rem;
+            margin: 1.0rem 0;
+            background-color: $white;
+        }
+        @include largest () {
+            font-size: 1.414rem;
+            line-height: 2rem;
+            min-height: 2rem;
+            border: none;
+            border-left: 1px solid $light-grey;
+            padding: 0 1.0rem;
+            margin: 1.0rem 0;
+            background-color: $white;
+        }
+        &:hover {
+            font-weight: 700;
+            color: $dark-brown;
+        }
+    }
+}
